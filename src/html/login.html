@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login and Register</title>
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+  <style>
+    .form-container {
+      display: none;
+    }
+
+    .form-container.active {
+      display: block;
+    }
+
+    .toggle-link {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 align="center" style="color: azure;">Decentralized Voting Using Ethereum Blockchain</h1>
+
+  <!-- Login Form -->
+  <div class="container mt-5 form-container active" id="loginContainer">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="voter-id"><h3>Voter ID</h3></label>
+        <input type="text" class="form-control" id="voter-id" name="voter-id" placeholder="Voter ID" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><h3>Password</h3></label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-primary"><b>Login</b></button>
+    </form>
+    <p>Don't have an account? <span class="toggle-link" onclick="showRegister()">Register here</span></p>
+  </div>
+
+  <!-- Register Form -->
+  <div class="container mt-5 form-container" id="registerContainer">
+    <h1>Register</h1>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="register-voter-id"><h3>Voter ID</h3></label>
+        <input type="text" class="form-control" id="register-voter-id" name="register-voter-id" placeholder="Voter ID" required>
+      </div>
+      <div class="form-group">
+        <label for="register-password"><h3>Password</h3></label>
+        <input type="password" class="form-control" id="register-password" name="register-password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn btn-success"><b>Register</b></button>
+    </form>
+    <p>Already have an account? <span class="toggle-link" onclick="showLogin()">Login here</span></p>
+  </div>
+
+  <script>
+    // Toggle between login and register forms
+    function showRegister() {
+      document.getElementById('loginContainer').classList.remove('active');
+      document.getElementById('registerContainer').classList.add('active');
+    }
+
+    function showLogin() {
+      document.getElementById('registerContainer').classList.remove('active');
+      document.getElementById('loginContainer').classList.add('active');
+    }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="../js/login.js" type="module"></script>
+</body>
+
+</html>

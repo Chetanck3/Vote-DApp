@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Portal</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div id="head" class="text-center">
+    <h1 align="center" style="color: azure;">Decentralized Voting Using Ethereum Blockchain</h1>
+    <br/>
+  </div>
+
+  <div class="container">
+    <legend>Add Candidate</legend>
+    <table class="table text-center">
+      <tr>
+        <th>Name</th>
+        <td><input id="name" type="text" name="name" placeholder="Candidate's name"></td>
+        <th>Party</th>
+        <td><input id="party" type="text" name="party" placeholder="Candidate's party"></td>
+        <th>Campaign</th>
+        <td>
+          <select id="campaignSelect">
+            <option value="">Select Campaign</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <input id="addCandidate" type="submit" value="Add Candidate">
+  </div>
+
+  <div class="container">
+    <legend>Add Campaign</legend>
+    <table class="table text-center">
+      <tr>
+        <th>Name</th>
+        <td><input id="campaignName" type="text" placeholder="Campaign name"></td>
+        <th>Start Date</th>
+        <td><input id="campaignStartDate" type="date"></td>
+        <th>End Date</th>
+        <td><input id="campaignEndDate" type="date"></td>
+      </tr>
+    </table>
+    <input id="addCampaign" type="submit" value="Add Campaign">
+  </div>
+
+  <div class="container">
+    <legend>Campaign Result</legend>
+    <table class="table text-center">
+      <tr>
+        <th>Select Campaign</th>
+        <td>
+          <select id="campaignSelectTwo">
+            <option value="">Select Campaign</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <input id="announceResult" type="submit" value="Announce Result">
+    <p id="result" style="color: azure; font-weight: bold;"></p>
+    <div id="winner" style="color: gold; font-weight: bold; margin-top: 20px;"></div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../dist/app.bundle.js"></script>
+</body>
+</html>
